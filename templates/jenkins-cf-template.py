@@ -30,11 +30,11 @@ from awacs.aws import (
 
 from awacs.sts import AssumeRole
 
-ApplicationName = "jenkins"
+ApplicationName = "ansible/jenkins"
 ApplicationPort = "8080"
 
-GithubAccount = "EffectiveDevOpsWithAWS"
-GithubAnsibleURL = "https://github.com/{}/ansible".format(GithubAccount)
+GithubAccount = "aczepiec"
+GithubAnsibleURL = "https://github.com/{}/effectivedevopswithaws".format(GithubAccount)
 
 AnsiblePullCmd = \
     "/usr/local/bin/ansible-pull -U {} {}.yml -i localhost".format(
