@@ -1,6 +1,10 @@
 ---
 - hosts: "{{ target | default('localhost') }}"
   become: yes
+  vars:
+    java_packages:
+      - java-1.8.0-openjdk
   roles:
-    - jenkins
-    - nodejs
+    - role: geerlingguy.java
+    - role: geerlingguy.jenkins
+    - role: nodejs
